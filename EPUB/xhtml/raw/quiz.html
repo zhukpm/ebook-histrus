@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+
+        body, html {
+            height: 100%
+        }
+
+        #splash .logo, #splash h4 {
+            opacity: 0;
+            position: absolute
+        }
+
+        #splash .logo img, #splash h4 .loaderContainer.invisible {
+            visibility: hidden
+        }
+
+        #splash, #splash .logo, #splash h3.slogan, #splash h4 {
+            position: absolute
+        }
+
+        @font-face {
+            font-family: icomoon;
+            src: url(EPUB/fonts/icomoon.eot?66eg2i);
+            src: url(EPUB/fonts/icomoon.eot?66eg2i#iefix) format("embedded-opentype"), url(EPUB/fonts/icomoon.ttf?66eg2i) format("truetype"), url(EPUB/fonts/icomoon.woff?66eg2i) format("woff"), url(EPUB/fonts/icomoon.svg?66eg2i#icomoon) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+
+        *, :after, :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        body {
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            padding: 20px;
+            margin: 0
+        }
+
+        #splash {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            background: center center no-repeat #fff;
+            text-align: center
+        }
+
+        #splash .logo {
+            z-index: 1;
+            top: 40px;
+            bottom: 50%;
+            left: 40px;
+            right: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-transition: opacity .3s ease-in-out;
+            -moz-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out
+        }
+
+        #splash h4 {
+            width: 100%;
+            color: inherit;
+            -webkit-transition: opacity .3s ease-in-out;
+            -moz-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+            vertical-align: baseline;
+            xheight: 25px;
+            margin: 5px 0 0;
+            font-weight: 400;
+            xtop: 80%;
+            bottom: 10%;
+            height: 40px;
+            font-size: 16px
+        }
+
+        #splash h4.loaded {
+            opacity: 1
+        }
+
+        #splash h4 .loaderContainer {
+            cursor: default;
+            color: #b693c1;
+            white-space: nowrap
+        }
+
+        @media (max-height: 280px) {
+            #splash h4 .loaderContainer {
+                display: none
+            }
+        }
+
+        #splash h4 .loaderContainer .wait {
+            margin-left: 3px
+        }
+
+        #kotobee.rtl #splash h4 .loaderContainer .wait {
+            margin-right: 3px;
+            margin-left: 0
+        }
+
+        #splash h4 .loaderContainer .icon-spinner {
+            font-size: 3em
+        }
+
+        #splash h4 .loaderContainer .icon-spinner.spinner {
+            display: block;
+            -webkit-animation: splashAnimRotate 1.4s infinite cubic-bezier(.68, -.55, .265, 1.55);
+            -moz-animation: splashAnimRotate 1.4s infinite cubic-bezier(.68, -.55, .265, 1.55);
+            animation: splashAnimRotate 1.4s infinite cubic-bezier(.68, -.55, .265, 1.55)
+        }
+
+        #splash h3.slogan {
+            padding: 0 50px;
+            xbottom: 30px;
+            width: 100%;
+            margin-top: 20px;
+            font-weight: 400;
+            color: inherit;
+            font-size: 24px;
+            top: 55%;
+            bottom: 20%
+        }
+
+        [class*=" icon-"], [class^=icon-] {
+            font-family: icomoon !important;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .icon-spinner:before {
+            content: "\e981"
+        }
+
+        @-webkit-keyframes splashAnimRotate {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes splashAnimRotate {
+            0% {
+                -moz-transform: rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes splashAnimRotate {
+            0% {
+                -webkit-transform: rotate(0);
+                -moz-transform: rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="../../../reader-files/styles.min.css">
+    <style type="text/css">
+        body, html {
+            height: 100%
+        }
+
+        #splash .logo, #splash h4 {
+            opacity: 0;
+            position: absolute
+        }
+
+        #splash .logo img, #splash h4 .loaderContainer.invisible {
+            visibility: hidden
+        }
+
+        #splash, #splash .logo, #splash h3.slogan, #splash h4 {
+            position: absolute
+        }
+
+        @font-face {
+            font-family: icomoon;
+            src: url(EPUB/fonts/icomoon.eot?66eg2i);
+            src: url(EPUB/fonts/icomoon.eot?66eg2i#iefix) format("embedded-opentype"), url(EPUB/fonts/icomoon.ttf?66eg2i) format("truetype"), url(EPUB/fonts/icomoon.woff?66eg2i) format("woff"), url(EPUB/fonts/icomoon.svg?66eg2i#icomoon) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+
+        *, :after, :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        body {
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            padding: 20px;
+            margin: 0
+        }
+
+        #splash {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            background: center center no-repeat #fff;
+            text-align: center
+        }
+
+        #splash .logo {
+            z-index: 1;
+            top: 40px;
+            bottom: 50%;
+            left: 40px;
+            right: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-transition: opacity .3s ease-in-out;
+            -moz-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out
+        }
+
+        #splash h4 {
+            width: 100%;
+            color: inherit;
+            -webkit-transition: opacity .3s ease-in-out;
+            -moz-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+            vertical-align: baseline;
+            xheight: 25px;
+            margin: 5px 0 0;
+            font-weight: 400;
+            xtop: 80%;
+            bottom: 10%;
+            height: 40px;
+            font-size: 16px
+        }
+
+        #splash h4.loaded {
+            opacity: 1
+        }
+
+        #splash h4 .loaderContainer {
+            cursor: default;
+            color: #b693c1;
+            white-space: nowrap
+        }
+
+        @media (max-height: 280px) {
+            #splash h4 .loaderContainer {
+                display: none
+            }
+        }
+
+        #splash h4 .loaderContainer .wait {
+            margin-left: 3px
+        }
+
+        #kotobee.rtl #splash h4 .loaderContainer .wait {
+            margin-right: 3px;
+            margin-left: 0
+        }
+
+        #splash h4 .loaderContainer .icon-spinner {
+            font-size: 3em
+        }
+
+        #splash h4 .loaderContainer .icon-spinner.spinner {
+            display: block;
+            -webkit-animation: splashAnimRotate 1.4s infinite cubic-bezier(.68, -.55, .265, 1.55);
+            -moz-animation: splashAnimRotate 1.4s infinite cubic-bezier(.68, -.55, .265, 1.55);
+            animation: splashAnimRotate 1.4s infinite cubic-bezier(.68, -.55, .265, 1.55)
+        }
+
+        #splash h3.slogan {
+            padding: 0 50px;
+            xbottom: 30px;
+            width: 100%;
+            margin-top: 20px;
+            font-weight: 400;
+            color: inherit;
+            font-size: 24px;
+            top: 55%;
+            bottom: 20%
+        }
+
+        [class*=" icon-"], [class^=icon-] {
+            font-family: icomoon !important;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .icon-spinner:before {
+            content: "\e981"
+        }
+
+        @-webkit-keyframes splashAnimRotate {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes splashAnimRotate {
+            0% {
+                -moz-transform: rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes splashAnimRotate {
+            0% {
+                -webkit-transform: rotate(0);
+                -moz-transform: rotate(0);
+                transform: rotate(0)
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section *, #epubContainer.stylesEnabled #spreadL > section ::after, #epubContainer.stylesEnabled #spreadL > section ::before {
+            box-sizing: border-box
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section article, #epubContainer.stylesEnabled #spreadL > section aside, #epubContainer.stylesEnabled #spreadL > section figcaption, #epubContainer.stylesEnabled #spreadL > section figure, #epubContainer.stylesEnabled #spreadL > section footer, #epubContainer.stylesEnabled #spreadL > section header, #epubContainer.stylesEnabled #spreadL > section hgroup, #epubContainer.stylesEnabled #spreadL > section main, #epubContainer.stylesEnabled #spreadL > section nav, #epubContainer.stylesEnabled #spreadL > section section {
+            display: block
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        #epubContainer {
+            background-color: #fff;
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [tabindex="-1"]:focus:not(:focus-visible) {
+            outline: 0 !important
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section h1, #epubContainer.stylesEnabled #spreadL > section h2, #epubContainer.stylesEnabled #spreadL > section h3, #epubContainer.stylesEnabled #spreadL > section h4, #epubContainer.stylesEnabled #spreadL > section h5, #epubContainer.stylesEnabled #spreadL > section h6 {
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section p {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section abbr[data-original-title], #epubContainer.stylesEnabled #spreadL > section abbr[title] {
+            text-decoration: underline;
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+            cursor: help;
+            border-bottom: 0;
+            -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section address {
+            margin-bottom: 1rem;
+            font-style: normal;
+            line-height: inherit
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section dl, #epubContainer.stylesEnabled #spreadL > section ol, #epubContainer.stylesEnabled #spreadL > section ul {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section ol ol, #epubContainer.stylesEnabled #spreadL > section ol ul, #epubContainer.stylesEnabled #spreadL > section ul ol, #epubContainer.stylesEnabled #spreadL > section ul ul {
+            margin-bottom: 0
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section dt {
+            font-weight: 700
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section dd {
+            margin-bottom: .5rem;
+            margin-left: 0
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section blockquote {
+            margin: 0 0 1rem
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section b, #epubContainer.stylesEnabled #spreadL > section strong {
+            font-weight: bolder
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section small {
+            font-size: 80%
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section sub, #epubContainer.stylesEnabled #spreadL > section sup {
+            position: relative;
+            font-size: 75%;
+            line-height: 0;
+            vertical-align: baseline
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section sub {
+            bottom: -.25em
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section sup {
+            top: -.5em
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section a {
+            color: #007bff;
+            text-decoration: none;
+            background-color: transparent
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section a:hover {
+            color: #0056b3;
+            text-decoration: underline
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section a:not([href]):not([class]) {
+            color: inherit;
+            text-decoration: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section a:not([href]):not([class]):hover {
+            color: inherit;
+            text-decoration: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section code, #epubContainer.stylesEnabled #spreadL > section kbd, #epubContainer.stylesEnabled #spreadL > section pre, #epubContainer.stylesEnabled #spreadL > section samp {
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 1em
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section pre {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            overflow: auto;
+            -ms-overflow-style: scrollbar
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section figure {
+            margin: 0 0 1rem
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section img {
+            vertical-align: middle;
+            border-style: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section svg {
+            overflow: hidden;
+            vertical-align: middle
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section table {
+            border-collapse: collapse
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section caption {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            color: #6c757d;
+            text-align: left;
+            caption-side: bottom
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section th {
+            text-align: inherit;
+            text-align: -webkit-match-parent
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section label {
+            display: inline-block;
+            margin-bottom: .5rem
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section button {
+            border-radius: 0
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section button:focus {
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section button, #epubContainer.stylesEnabled #spreadL > section input, #epubContainer.stylesEnabled #spreadL > section optgroup, #epubContainer.stylesEnabled #spreadL > section select, #epubContainer.stylesEnabled #spreadL > section textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section button, #epubContainer.stylesEnabled #spreadL > section input {
+            overflow: visible
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section button, #epubContainer.stylesEnabled #spreadL > section select {
+            text-transform: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [role=button] {
+            cursor: pointer
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section select {
+            word-wrap: normal
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [type=button], #epubContainer.stylesEnabled #spreadL > section [type=reset], #epubContainer.stylesEnabled #spreadL > section [type=submit], #epubContainer.stylesEnabled #spreadL > section button {
+            -webkit-appearance: button
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [type=button]:not(:disabled), #epubContainer.stylesEnabled #spreadL > section [type=reset]:not(:disabled), #epubContainer.stylesEnabled #spreadL > section [type=submit]:not(:disabled), #epubContainer.stylesEnabled #spreadL > section button:not(:disabled) {
+            cursor: pointer
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [type=button]::-moz-focus-inner, #epubContainer.stylesEnabled #spreadL > section [type=reset]::-moz-focus-inner, #epubContainer.stylesEnabled #spreadL > section [type=submit]::-moz-focus-inner, #epubContainer.stylesEnabled #spreadL > section button::-moz-focus-inner {
+            padding: 0;
+            border-style: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section input[type=checkbox], #epubContainer.stylesEnabled #spreadL > section input[type=radio] {
+            box-sizing: border-box;
+            padding: 0
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section textarea {
+            overflow: auto;
+            resize: vertical
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section fieldset {
+            min-width: 0;
+            padding: 0;
+            margin: 0;
+            border: 0
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section legend {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin-bottom: .5rem;
+            font-size: 1.5rem;
+            line-height: inherit;
+            color: inherit;
+            white-space: normal
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section progress {
+            vertical-align: baseline
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [type=number]::-webkit-inner-spin-button, #epubContainer.stylesEnabled #spreadL > section [type=number]::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [type=search] {
+            outline-offset: -2px;
+            -webkit-appearance: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [type=search]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section ::-webkit-file-upload-button {
+            font: inherit;
+            -webkit-appearance: button
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section output {
+            display: inline-block
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section summary {
+            display: list-item;
+            cursor: pointer
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section template {
+            display: none
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section [hidden] {
+            display: none !important
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section blockquote, #epubContainer.stylesEnabled #spreadL > section em {
+            font-style: italic
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section #fxlChapter, #epubContainer.stylesEnabled #spreadL > section #layerBg.kb, #epubContainer.stylesEnabled #spreadL > section #layerBtns.kb {
+            left: 0;
+            position: absolute
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section {
+            height: 100%
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            margin: 0
+        }
+
+        @media (max-width: 800px) {
+            #epubContainer.stylesEnabled #spreadL > section {
+                padding-left: 10px;
+                padding-right: 10px
+            }
+
+            #epubContainer.stylesEnabled #spreadL > section div {
+                xnone: 12
+            }
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section.rtl {
+            font-family: Tahoma, Arial, Helvetica, sans-serif
+        }
+
+        #epubContainer.stylesEnabled #spreadL > section .h1, #epubContainer.stylesEnabled #spreadL > section .h2, #epubContainer.stylesEnabled #spreadL > section .h3, #epubContainer.stylesEnabled #spreadL > section .h4, #epubContainer.stylesEnabled #spreadL > section .h5, #epubContainer.stylesEnabled #spreadL > section .h6, #epubContainer.stylesEnabled #spreadL > section .tab-item, #epubContainer.stylesEnabled #spreadL > section button, #epubContainer.stylesEnabled #spreadL > section h1, #epubContainer.stylesEnabled #spreadL > section h2, #epubContainer.stylesEnabled #spreadL > section h3, #epubContainer.stylesEnabled #spreadL > section h4, #epubContainer.stylesEnabled #spreadL > section h5, #epubContainer.stylesEnabled #spreadL > section h6, #epubContainer.stylesEnabled #spreadL > section input, #…
+    </style>
+
+<!--    <link rel="stylesheet" href="../../css/base.css">-->
+<!--    <link rel="stylesheet" href="../../css/kotobeeInteractive.css">-->
+    <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body style="overflow: auto;">
+<div class="perspectiveContainer">
+    <ion-content id="epubContainer" ng-controller="ContentCtrl"
+                 class="ebook-content has-header has-footer scroll-content ionic-scroll overflow-scroll disable-user-behavior stylesEnabled"
+                 ng-init="init()" has-header="true" has-footer="true" delegate-handle="content"
+                 padding="true" scroll="true" direction="xy" zooming="true" overflow-scroll="true"
+                 tabindex="0" has-bouncing="true" on-touch="mouseDown()" on-release="mouseUp()"
+                 on-scroll="scroll()" mouse-events="">
+        <div class="scroll padding afterDelay">
+            <div id="epubInner">
+                <div id="epubContent" class="adjustedLineHeight" style="font-size: 1em;">
+                    <sections id="spreadL" class="rfl" style="font-size: 1em;">
+                        <section sec="0" class="k-section parsed">
+                            <div class="basic-facts-page">
+                                <div class="f-container underlay"></div>
+                                <div class="container-xl">
+                                    <div class="row">
+                                        <div class="col-12 offset-0 col-sm-10 offset-sm-1">
+                                            <h5>Опорные знания (занятие 1)</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 offset-0 col-md-10 offset-md-1">
+                                            <div class="card">
+                                                <div class="kInteractive questions quiz"
+                                                     data-kotobee="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"
+                                                     dir="ltr" id="ki-qs-9623"
+                                                     style="color: rgb(51, 51, 51); padding: 0px; font-size: 1em; direction: ltr;">
+                                                    <div class="_style1">
+                                                        <span><h4><span>Тест </span><span>для </span><span>самопроверки</span></h4></span>
+                                                        <div class="qContainer">
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">1</span></strong><span> </span><span>Древнюю </span><span>Русь </span><span>крестили </span><span>представители </span><span>государства, </span><span>которое </span><span>называлось </span><span>Как </span><span>называлось </span><span>какое-то </span><span>там </span><span>очень </span><span>важное </span><span>государство </span><span>когда-то </span><span>очень </span><span>давно </span><span>...</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-0-0"
+                                                                        name="mcq-9623-0"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-0-0"
+                                                                        class="ki-noHighlight">
+                                                                    Хазария</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-0-1"
+                                                                        name="mcq-9623-0"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-0-1"
+                                                                        class="ki-noHighlight">
+                                                                    Ливония</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-0-2"
+                                                                        name="mcq-9623-0"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-0-2"
+                                                                        class="ki-noHighlight">
+                                                                    Византия</label></div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">2</span></strong><span> </span><span>Русь </span><span>приняла </span><span>христианство </span><span>в </span><span>конце </span><span>...</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-1-0"
+                                                                        name="mcq-9623-1"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-1-0"
+                                                                        class="ki-noHighlight"><span> </span><span>VI </span><span>века</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-1-1"
+                                                                        name="mcq-9623-1"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-1-1"
+                                                                        class="ki-noHighlight"><span> </span><span>X </span><span>века</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-1-2"
+                                                                        name="mcq-9623-1"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-1-2"
+                                                                        class="ki-noHighlight"><span> </span><span>XIII </span><span>века</span></label>
+                                                                </div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">3</span></strong><span> </span><span>Религиозным </span><span>символом </span><span>христианства </span><span>является </span><span>...</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-2-0"
+                                                                        name="mcq-9623-2"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-2-0"
+                                                                        class="ki-noHighlight">
+                                                                    звезда</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-2-1"
+                                                                        name="mcq-9623-2"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-2-1"
+                                                                        class="ki-noHighlight">
+                                                                    полумесяц</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-2-2"
+                                                                        name="mcq-9623-2"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-2-2"
+                                                                        class="ki-noHighlight">
+                                                                    крест</label></div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">4</span></strong><span> </span><span>Христианство </span><span>на </span><span>Руси </span><span>было </span><span>принято </span><span>при </span><span>князе</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-3-0"
+                                                                        name="mcq-9623-3"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-3-0"
+                                                                        class="ki-noHighlight">
+                                                                    Олеге</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-3-1"
+                                                                        name="mcq-9623-3"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-3-1"
+                                                                        class="ki-noHighlight">
+                                                                    Святославе</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-3-2"
+                                                                        name="mcq-9623-3"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-3-2"
+                                                                        class="ki-noHighlight">
+                                                                    Владимире</label></div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">5</span></strong><span> </span><span>«Русская </span><span>Правда» </span><span>в </span><span>Древней </span><span>Руси </span><span>- </span><span>это </span><span>...</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-4-0"
+                                                                        name="mcq-9623-4"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-4-0"
+                                                                        class="ki-noHighlight"><span> </span><span>Свод </span><span>законов</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-4-1"
+                                                                        name="mcq-9623-4"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-4-1"
+                                                                        class="ki-noHighlight"><span> </span><span>Политическая </span><span>программа</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-4-2"
+                                                                        name="mcq-9623-4"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-4-2"
+                                                                        class="ki-noHighlight">
+                                                                    Конституция</label></div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">6</span></strong><span> </span><span>Киев </span><span>был </span><span>столицей </span><span>...</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-5-0"
+                                                                        name="mcq-9623-5"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-5-0"
+                                                                        class="ki-noHighlight"><span> </span><span>Московского </span><span>государства</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-5-1"
+                                                                        name="mcq-9623-5"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-5-1"
+                                                                        class="ki-noHighlight"><span> </span><span>Древнерусского </span><span>государства</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-5-2"
+                                                                        name="mcq-9623-5"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-5-2"
+                                                                        class="ki-noHighlight"><span> </span><span>Золотой </span><span>орды</span></label>
+                                                                </div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">7</span></strong><span> </span><span>В </span><span>XIII </span><span>веке </span><span>в </span><span>борьбе </span><span>с </span><span>немецкими </span><span>рыцарями </span><span>победу </span><span>одержал </span><span>великий </span><span>князь </span><span>...</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-6-0"
+                                                                        name="mcq-9623-6"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-6-0"
+                                                                        class="ki-noHighlight"><span> </span><span>Владимир </span><span>Святой</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-6-1"
+                                                                        name="mcq-9623-6"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-6-1"
+                                                                        class="ki-noHighlight"><span> </span><span>Ярослав </span><span>Мудрый</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-6-2"
+                                                                        name="mcq-9623-6"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-6-2"
+                                                                        class="ki-noHighlight"><span> </span><span>Александр </span><span>Невский</span></label>
+                                                                </div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">8</span></strong><span> </span><span>Основной </span><span>торговый </span><span>путь </span><span>Древней </span><span>Руси </span><span>проходил </span><span>по</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-7-0"
+                                                                        name="mcq-9623-7"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-7-0"
+                                                                        class="ki-noHighlight">
+                                                                    Волге</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-7-1"
+                                                                        name="mcq-9623-7"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-7-1"
+                                                                        class="ki-noHighlight">
+                                                                    Днепру</label></div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-7-2"
+                                                                        name="mcq-9623-7"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-7-2"
+                                                                        class="ki-noHighlight">
+                                                                    Москве-реке</label></div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">9</span></strong><span> </span><span>Самый </span><span>известный </span><span>храм </span><span>Древней </span><span>Руси </span><span>называется</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-8-0"
+                                                                        name="mcq-9623-8"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-8-0"
+                                                                        class="ki-noHighlight"><span> </span><span>Собор </span><span>Святой </span><span>Софии</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-8-1"
+                                                                        name="mcq-9623-8"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-8-1"
+                                                                        class="ki-noHighlight"><span> </span><span>Московский </span><span>кремль</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-8-2"
+                                                                        name="mcq-9623-8"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-8-2"
+                                                                        class="ki-noHighlight"><span> </span><span>Собор </span><span>Василия </span><span>Блаженного</span></label>
+                                                                </div>
+                                                                <p class="separator"></p></div>
+                                                            <div class="ques mcq">
+                                                                <div class="questionTxt">
+                                                                    <strong><span
+                                                                            class="no">10</span></strong><span> </span><span>Древнерусское </span><span>государство </span><span>было </span><span>создано </span><span>на </span><span>территории</span>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-9-0"
+                                                                        name="mcq-9623-9"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-9-0"
+                                                                        class="ki-noHighlight"><span> </span><span>Западной </span><span>Европы</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-9-1"
+                                                                        name="mcq-9623-9"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-9-1"
+                                                                        class="ki-noHighlight"><span> </span><span>Восточной </span><span>Европы</span></label>
+                                                                </div>
+                                                                <div class="answer"><input
+                                                                        id="ki-mcq-9623-9-2"
+                                                                        name="mcq-9623-9"
+                                                                        type="radio"
+                                                                        class="ki-inputbox ans"><label
+                                                                        for="ki-mcq-9623-9-2"
+                                                                        class="ki-noHighlight"><span> </span><span>Центральной </span><span>Азии </span></label>
+                                                                </div>
+                                                                <p class="separator"></p></div>
+                                                        </div>
+                                                        <div class="btnContainer"><input
+                                                                type="submit"
+                                                                value="Отправить ответы"
+                                                                id="ki-9623-btn"
+                                                                class="btn ki-btn questions-submit">
+                                                            <input type="submit"
+                                                                   value="Стереть ответы"
+                                                                   class="btn ki-btn ki-questions questions-clear">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </sections>
+                </div>
+                <div id="epubMeta"></div>
+            </div>
+        </div>
+    </ion-content>
+</div>
+</body>
+</html>
