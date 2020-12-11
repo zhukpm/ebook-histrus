@@ -70,12 +70,16 @@ h5 {
 }
 
 a,
-.new-words-card .new-word a {
+.new-words-card a.new-word {
     color: inherit;
 }
 
+.new-words-card a.new-word {
+    display: block;
+}
+
 a:hover,
-.new-words-card .new-word a:hover {
+.new-words-card a.new-word:hover {
     color: #ED6E2B;
     text-decoration: none;
 }
@@ -243,23 +247,42 @@ Lesson pages
 }
 
 .lesson .h-container .decor-element,
-.lesson .h-container .left-h-image,
-.lesson .h-container .right-h-image {
+.lesson .h-container .left-h-image-person,
+.lesson .h-container .right-h-image-background,
+.lesson .h-container .right-h-image-person,
+.lesson .h-container .left-h-image-background
+{
     position: absolute;
 }
 
-.lesson .h-container .left-h-image {
+.lesson .h-container .left-h-image-person,
+.lesson .h-container .right-h-image-person
+{
     bottom: -134px;
     left: 0;
     width: 25.4%;
     height: auto;
 }
 
-.lesson .h-container .right-h-image {
+.lesson .h-container .right-h-image-person
+{
+    left: auto;
+    right: 0;
+    width: 33%;
+}
+
+.lesson .h-container .right-h-image-background,
+.lesson .h-container .left-h-image-background
+{
     bottom: -134px;
     right: 0;
     width: 80%;
     height: auto;
+}
+
+.lesson .h-container .left-h-image-background{
+    left: 0;
+    right: auto;
 }
 
 .lesson .h-container .decor-element {
@@ -663,8 +686,11 @@ Customizing styles without adding new classes
         width: 65px;
     }
 
-    .lesson .h-container .left-h-image,
-    .lesson .h-container .right-h-image {
+    .lesson .h-container .left-h-image-person,
+    .lesson .h-container .right-h-image-background,
+    .lesson .h-container .right-h-image-person,
+    .lesson .h-container .left-h-image-background
+    {
         bottom: -154px;
     }
 
@@ -791,17 +817,22 @@ Customizing styles without adding new classes
         padding-bottom: 19px;
     }
 
-    .lesson .h-container .left-h-image,
-    .lesson .h-container .right-h-image {
+    .lesson .h-container .left-h-image-person,
+    .lesson .h-container .right-h-image-background,
+    .lesson .h-container .right-h-image-person,
+    .lesson .h-container .left-h-image-background {
         bottom: -19px;
         width: auto;
     }
 
-    .lesson .h-container .left-h-image {
+    .lesson .h-container .left-h-image-person,
+    .lesson .h-container .right-h-image-person
+    {
         height: 100%;
     }
 
-    .lesson .h-container .right-h-image {
+    .lesson .h-container .right-h-image-background,
+    .lesson .h-container .left-h-image-background {
         height: 90%;
     }
 
@@ -911,16 +942,20 @@ Customizing styles without adding new classes
         margin-bottom: 24px;
     }
 
-    .lesson .h-container .left-h-image,
-    .lesson .h-container .right-h-image {
+    .lesson .h-container .left-h-image-person,
+    .lesson .h-container .right-h-image-background,
+    .lesson .h-container .right-h-image-person,
+    .lesson .h-container .left-h-image-background {
         bottom: -134px;
     }
 
-    .lesson .h-container .left-h-image {
+    .lesson .h-container .left-h-image-person,
+    .lesson .h-container .right-h-image-person {
         height: auto;
     }
 
-    .lesson .h-container .right-h-image {
+    .lesson .h-container .right-h-image-background,
+    .lesson .h-container .left-h-image-background {
         height: auto;
     }
 
@@ -974,4 +1009,40 @@ Customizing styles without adding new classes
     .basic-facts-page .ru-card h3 {
         margin-bottom: 26px;
     }
+}
+
+/*
+ * Specific screen resolutions ONLY
+ */
+@media (max-width: 767.98px) {
+    /*
+        => 540 ONLY
+     */
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*
+        => 720 ONLY
+    */
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*
+        => 960 ONLY
+     */
+    .lesson-3 .h-container .left-h-image-background {
+        height: 115%;
+    }
+
+    .lesson-3  .h-container .right-h-image-person {
+        margin-right: 10%;
+        height: 170%;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*
+        => 1140 ONLY
+     */
+
 }
