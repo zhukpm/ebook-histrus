@@ -135,6 +135,7 @@ ol.rounded-ol li::before {
     margin-block-end: calc(-1.5 * 1em);;
 }
 
+.text-block .image,
 .text-block p {
     margin-block-end: calc(1.5 * 1em);
 }
@@ -335,6 +336,93 @@ Lesson pages
     border-bottom: 1px solid #ED6E2B;
     line-height: 1.2;
 }
+
+/*
+Chapter pages
+ */
+.ru-chapter .h-container .container {
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+    background-color: transparent;
+}
+
+.ru-chapter .chapter-number,
+.ru-chapter .decor-element {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 78px;
+    /*height: 100%;*/
+    align-items: center;
+    justify-content: center;
+    background-color: #F6EEE3;
+}
+
+.ru-chapter .chapter-number {
+    font-family: "PT Sans", sans-serif;
+    font-weight: normal;
+    font-size: 1.888889em;
+    line-height: 1.3;
+    letter-spacing: 0.2em;
+    color: #BC9C76;
+    text-transform: uppercase;
+}
+
+.ru-chapter .decor-element {
+    left: auto;
+    right: 0;
+}
+
+.ru-chapter .decor-element img {
+    width: 45px;
+    height: auto;
+}
+
+.ru-chapter h3 {
+    text-align: center;
+    text-transform: initial;
+}
+
+.ru-chapter .chapter-content {
+    padding-top: 15px;
+}
+
+.ru-chapter .f-container {
+    margin-top: 67px;
+}
+
+.ru-chapter .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ru-chapter .image.align-end {
+    justify-content: flex-end;
+}
+
+
+.ru-chapter .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ru-chapter .image .caption {
+    margin-top: 10px;
+    max-width: 100%;
+    color: #BC9C76;
+    text-align: center;
+}
+
+.chapter-content a {
+    text-decoration: underline;
+    color: #ED6E2B;
+}
+
 /*
 Basic facts pages
  */
@@ -718,6 +806,36 @@ Customizing styles without adding new classes
         margin-right: 40px;
     }
 
+    .ru-chapter .h-container .container {
+        min-height: 110px;
+        background-color: white;
+    }
+
+    .ru-chapter .chapter-number,
+    .ru-chapter .decor-element {
+        width: 110px;
+    }
+
+    .ru-chapter .chapter-number {
+        font-size: 2.777778em;
+        line-height: 1.3;
+        letter-spacing: 0;
+        color: #ED6E2B;
+    }
+
+    .ru-chapter .decor-element img {
+        width: 65px;
+    }
+
+    .ru-chapter h3 {
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .ru-chapter .f-container {
+        margin-top: 77px;
+    }
+
     .basic-facts {
         padding-block-start: 59px;
     }
@@ -834,6 +952,10 @@ Customizing styles without adding new classes
     .lesson .h-container .right-h-image-background,
     .lesson .h-container .left-h-image-background {
         height: 90%;
+    }
+
+    .ru-chapter .f-container {
+        margin-top: 87px;
     }
 
     .basic-facts {
@@ -974,6 +1096,18 @@ Customizing styles without adding new classes
         margin-bottom: 30px;
     }
 
+    .ru-chapter .chapter-number {
+        font-size: 2.272727em;
+    }
+
+    .ru-chapter h3 {
+        text-align: center;
+    }
+
+    .ru-chapter .f-container {
+        margin-top: 117px;
+    }
+
     .basic-facts {
         padding-block-start: 100px;
     }
@@ -1018,6 +1152,9 @@ Customizing styles without adding new classes
     /*
         => 540 ONLY
      */
+    .ru-chapter h3 {
+        margin-bottom: 15px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1037,6 +1174,10 @@ Customizing styles without adding new classes
     .lesson-3  .h-container .right-h-image-person {
         margin-right: 10%;
         height: 170%;
+    }
+
+    .ru-chapter h3 {
+        margin-left: -5%;
     }
 }
 
