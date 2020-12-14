@@ -125,3 +125,11 @@
     vertical-align: bottom;
     margin-left: 10px;
 }
+
+/*
+Hiding splash screen title
+ */
+
+#splash h3.slogan {
+    display: none !important;
+}

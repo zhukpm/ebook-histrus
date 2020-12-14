@@ -140,7 +140,7 @@ ol.rounded-ol li::before {
     margin-block-end: calc(1.5 * 1em);
 }
 
-span.emphasis {
+.emphasis {
     font-weight: bold;
 }
 
@@ -148,7 +148,7 @@ span.thin {
     font-weight: normal;
 }
 
-span.it {
+.it {
     font-style: italic;
 }
 
@@ -166,6 +166,26 @@ span.it {
 
 .shown-md, .shown-lg, .shown-xl {
     display: none;
+}
+
+/*
+Cover page, Information page
+ */
+.cover-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #F6EEE3;
+}
+
+.ru-cover {
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    max-height: 704px;
+    background: url("../imgs/book-cover-mob.png") no-repeat 0 0;
 }
 
 /*
@@ -724,6 +744,12 @@ Customizing styles without adding new classes
         font-size: 1.333333em;
     }
 
+    .ru-cover {
+        max-width: 720px;
+        max-height: 1022px;
+        background-image: url("../imgs/book-cover-tab-port.png");
+    }
+
     .greet-intro {
         padding-top: 37px;
         padding-bottom: 77px;
@@ -917,6 +943,12 @@ Customizing styles without adding new classes
         font-size: 1.7777777777777778em;
     }
 
+    .ru-cover {
+        max-width: 1024px;
+        max-height: 720px;
+        background-image: url("../imgs/book-cover-tab-land.png");
+    }
+
     .greet-intro .decor-element-bw {
         display: block;
     }
@@ -1030,6 +1062,12 @@ Customizing styles without adding new classes
 
     h5 {
         font-size: 0.8181818181818181812em;
+    }
+
+    .ru-cover {
+        max-width: 1140px;
+        max-height: 551px;
+        background-image: url("../imgs/book-cover-web.png");
     }
 
     .greet-intro {
