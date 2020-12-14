@@ -133,3 +133,17 @@ Hiding splash screen title
 #splash h3.slogan {
     display: none !important;
 }
+
+/*
+Подпись картинок в галее при раскрытии
+ */
+.kInteractive.gallery.fullscreen .imgCaption>.inner {
+    display: inline-block;
+    margin: 5px 50px;
+    padding: 6px 20px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #BC9C76!important;;
+    pointer-events: auto;
+    font-size: 0.9em;
+}

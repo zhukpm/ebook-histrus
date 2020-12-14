@@ -15,9 +15,32 @@ Kotobee integration styles
 body {
     padding: 0;
 }
-/*!
-General styles
+
+/*
+    no-page-caption на галерее удаляет кэпшн на странице (актуально если он очень большой),
+    но оставляем на фулл-скрин
  */
+.gallery.no-page-caption .imgCaption {
+    display: none;
+}
+
+.gallery.fullscreen.no-page-caption .imgCaption {
+    display: inherit;
+}
+
+.gallery .imgCaption>.inner {
+    display: inline-block;
+    margin: 5px 50px;
+    padding: 6px 20px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #BC9C76;
+    pointer-events: auto;
+    font-size: 0.9em;
+}
+    /*!
+    General styles
+     */
 
 /*
     Ширина контейнер ДО 767 пикселей => 540
@@ -135,7 +158,7 @@ ol.rounded-ol li::before {
     margin-block-end: calc(-1.5 * 1em);;
 }
 
-.text-block .image,
+.text-block .ru-image,
 .text-block p {
     margin-block-end: calc(1.5 * 1em);
 }
@@ -414,28 +437,55 @@ Chapter pages
     margin-top: 67px;
 }
 
-.ru-chapter .image {
+.ru-chapter .ru-image {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 
-.ru-chapter .image.align-end {
+.ru-chapter .ru-image.align-end {
     justify-content: flex-end;
 }
 
 
-.ru-chapter .image img {
+.ru-chapter .ru-image img {
     max-width: 100%;
     height: auto;
 }
 
-.ru-chapter .image .caption {
+.ru-chapter .ru-image .caption,
+.ru-chapter .ru-video .caption {
     margin-top: 10px;
     max-width: 100%;
     color: #BC9C76;
     text-align: center;
+}
+
+/*
+ Видео заключаются в wrapper с указанием соответствующего aspect ratio
+ */
+.ru-chapter .ru-video > .video-wrapper {
+    position: relative;
+    height: 0;
+}
+
+.ru-chapter .ru-video > .video-wrapper.aspect169 {
+    padding-bottom: 56.25%; /* 16:9 */
+}
+
+.ru-chapter .ru-video > .video-wrapper.aspect43 {
+    padding-bottom: 75%; /* 4:3 */
+}
+
+.ru-chapter .ru-video > .video-wrapper .video,
+.ru-chapter .ru-video > .video-wrapper iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .chapter-content a {
