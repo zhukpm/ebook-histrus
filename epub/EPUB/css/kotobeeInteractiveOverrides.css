@@ -6,7 +6,7 @@
     KotobeeInteractive Overrided
  */
 #kiSystemAlertBox {
-    padding: 52px 60px 45px 60px;
+    padding: 20px;
     background-color: white;
     box-shadow: 1px 1px 2px #00000029;
     border: none;
@@ -143,7 +143,87 @@ Hiding splash screen title
     padding: 6px 20px;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.9);
-    color: #BC9C76!important;;
+    color: #4b4136!important;;
     pointer-events: auto;
     font-size: 0.9em;
+}
+
+.modal div[ng-if$="'image'"] .bar-header h1 {
+    color: #BC9C76;
+}
+
+/*
+Окно информации о книге
+ */
+
+#kotobee #bookInfoModal .banner {
+    background: linear-gradient(to bottom, #BC9C76 0, #754D33 20%, #4B4136 100%);
+}
+
+#kotobee #bookInfoModal .info > * {
+    font-family: "PT Sans", sans-serif;
+    color: #F6EEE3;
+}
+
+/*
+Кнопки для модальных окон
+ */
+.button.button-positive,
+.button.button-light,
+.button.button-assertive {
+    min-width: 100px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    color: #383838;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.2;
+    font-weight: normal;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.button.button-positive {
+    background-color: #BC9C76;
+    color: white;
+}
+
+.button.button-positive:focus {
+    background-color: #987e60;
+}
+
+.button.button-assertive {
+    background-color: #ED6E2B;
+    color: white;
+}
+
+.button.button-assertive:focus {
+    background-color: #ca5e26;
+}
+
+/*
+Изменения на различных разрешениях
+ */
+@media (min-width: 768px) {
+    /*
+    Ширина контейнер => 720
+     */
+    #kiSystemAlertBox {
+        padding: 20px 30px 20px 30px;
+    }
+}
+@media (min-width: 992px) {
+    /*
+        Ширина контейнер => 960
+     */
+    #kiSystemAlertBox {
+        padding: 52px 60px 45px 60px;
+    }
+}
+@media (min-width: 1200px) {
+    /*
+        Ширина контейнер => 1140
+     */
 }

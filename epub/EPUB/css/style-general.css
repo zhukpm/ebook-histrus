@@ -211,6 +211,26 @@ Cover page, Information page
     background: url("../imgs/book-cover-mob.png") no-repeat 0 0;
 }
 
+.book-info-page {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    min-height: 100%;
+    background-color: #F6EEE3;
+}
+
+.book-info {
+    margin-bottom: 2em;
+}
+
+.ru-reviewers, .ru-isbn, .ru-copyrights {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.ru-authors h6 {
+    text-transform: uppercase;
+}
+
 /*
 Greeting & Intro pages
  */
@@ -629,7 +649,8 @@ Basic facts pages
 }
 
 .bf-card {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
     border: 1px solid #EBEBEB;
     border-radius: 4px;
