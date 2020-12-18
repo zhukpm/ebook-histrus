@@ -490,6 +490,10 @@ Chapter pages
     background-color: transparent;
 }
 
+.ru-chapter .h-container .container .row {
+    flex: 1;
+}
+
 .ru-chapter .chapter-number,
 .ru-chapter .decor-element {
     display: flex;
@@ -857,8 +861,8 @@ Customizing styles without adding new classes
  .quiz input[type="submit"] {
     margin-left: 20px;
     padding: 0;
-    width: 157px;
-    height: 33px;
+    width: 8.73em;
+    height: 1.83em;
     border-radius: 4px;
     background-color: #F2F2F2;
     color: #383838;
