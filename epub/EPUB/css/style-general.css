@@ -159,6 +159,7 @@ ol.rounded-ol li::before {
 }
 
 .text-block .ru-image,
+.text-block .ru-video,
 .text-block p {
     margin-block-end: calc(1.5 * 1em);
 }
