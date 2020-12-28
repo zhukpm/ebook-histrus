@@ -177,7 +177,7 @@ span.thin {
 }
 
 .hidden-sm {
-    display: none;
+    display: none !important;
 }
 
 .hidden-md,.hidden-lg, .hidden-xl {
@@ -188,8 +188,13 @@ span.thin {
 
 }
 
-.shown-md, .shown-lg, .shown-xl {
-    display: none;
+.shown-sm-flex {
+    display: flex;
+}
+
+.shown-md, .shown-lg, .shown-xl,
+.shown-md-flex, .shown-lg-flex, .shown-xl-flex {
+    display: none !important;
 }
 
 /*
@@ -886,12 +891,17 @@ Customizing styles without adding new classes
     Ширина контейнер => 720
      */
     .hidden-md {
-        display: none;
+        display: none !important;
     }
 
     .shown-md {
-        display: inherit;
+        display: inherit !important;
     }
+
+    .shown-md-flex {
+        display: flex !important;
+    }
+
 
     h1 {
         font-size: 1.88888888888888889em;
@@ -1089,11 +1099,15 @@ Customizing styles without adding new classes
         Ширина контейнер => 960
      */
     .hidden-lg {
-        display: none;
+        display: none !important;
     }
 
     .shown-lg {
-        display: inherit;
+        display: inherit !important;
+    }
+
+    .shown-lg-flex {
+        display: flex !important;
     }
 
     h1 {
@@ -1205,11 +1219,15 @@ Customizing styles without adding new classes
         Ширина контейнер => 1140
      */
     .hidden-xl {
-        display: none;
+        display: none !important;
     }
 
     .shown-xl {
-        display: inherit;
+        display: inherit !important;
+    }
+
+    .shown-xl-flex {
+        display: flex !important;
     }
 
     body {
