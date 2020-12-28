@@ -573,6 +573,9 @@ Chapter pages
     font-size: 0.9em;
 }
 
+.ru-image-flag {
+    border: 1px solid lightgray;
+}
 /*
  Видео заключаются в wrapper с указанием соответствующего aspect ratio
  */
