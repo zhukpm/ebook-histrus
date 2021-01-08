@@ -11,8 +11,8 @@
     box-shadow: 1px 1px 2px #00000029;
     border: none;
     border-radius: 2px;
-    width: auto;
-    max-width: 540px;
+    width: 75%;
+    max-width: 350px;
     font-family: 'PT Sans', sans-serif;
     font-size: 20px;
     font-weight: normal;
@@ -212,6 +212,8 @@ Hiding splash screen title
      */
     #kiSystemAlertBox {
         padding: 20px 30px 20px 30px;
+        width: auto;
+        max-width: 540px;
     }
 }
 @media (min-width: 992px) {
