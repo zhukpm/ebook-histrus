@@ -222,8 +222,23 @@ Hiding splash screen title
         padding: 52px 60px 45px 60px;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1470px) {
     /*
         Ширина контейнер => 1140
      */
+
+}
+
+/*
+Когда появляется сайдбар слева (330px) - надо учесть это в "предыдущей" и "следующей"
+странице, т.к. они сохраняются в iframe, и не могут получить доступ к этим +330 во viewport,
+из-за чего там может отображаться вид для LG вместо XL. В итоге, при перемотке страниц
+возникает глитч
+ */
+@media (min-width: 1300px) {
+    .navBookBlock #prevPage,
+    .navBookBlock #nextPage {
+        width: calc(100% + 330px); /* Ширина родителя + сайдбар */
+        margin-left: -330px;
+    }
 }
