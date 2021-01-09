@@ -211,6 +211,11 @@ span.thin {
     display: none !important;
 }
 
+.line-break::before {
+    content: "\A";
+    white-space: pre-line;
+}
+
 /*
 Cover page, Information page
  */
@@ -872,10 +877,11 @@ Customizing styles without adding new classes
 /*}*/
 
  .quiz .answer label {
-    position: relative;
-    margin-bottom: 0;
-    text-indent: 0;
-    cursor: pointer;
+     position: relative;
+     flex: 1;
+     margin-bottom: 0;
+     text-indent: 0;
+     cursor: pointer;
 }
 
  .quiz .btnContainer {
@@ -1161,6 +1167,7 @@ Customizing styles without adding new classes
 
     .section-4 img {
         top: calc(-2em - 51px);
+        /*max-height: calc(100vh - 184px - 1.2em);*/
     }
 
     .lesson .h-container {
@@ -1200,7 +1207,12 @@ Customizing styles without adding new classes
 
     .basic-facts {
         padding-block-start: 100px;
+        padding-block-start: clamp(10px, calc((100vh - 522px) / 2), 100px);
     }
+
+    /*.iframed .basic-facts {*/
+    /*    padding-block-start: clamp(10px, calc((100vh - 418px) / 2), 100px);*/
+    /*}*/
 
     .basic-facts h4, .basic-facts h2 {
         text-align: left;
@@ -1208,6 +1220,8 @@ Customizing styles without adding new classes
 
     .basic-facts .decor-element-bw {
         width: 445px;
+        max-height: calc(50vh + 139px - calc(11px + 1.2*1.111111em));
+        /*max-height: calc(100vh - 102px - calc((100vh - 420px) / 2) - calc(11px + 1.2*1.111111em));*/
         top: calc(11px + 1.2 * 1.111111em);
         left: -103px;
     }
@@ -1388,6 +1402,7 @@ Customizing styles without adding new classes
     }
 
     .basic-facts .decor-element-bw {
+        max-height: none;
         top: -23px;
         left: -112px;
     }

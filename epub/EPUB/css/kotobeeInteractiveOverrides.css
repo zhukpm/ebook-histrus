@@ -115,13 +115,13 @@
 }
 
 #kiSystemAlertBox .kbAlertScroll > span.answer-wrong::before {
-    content: url("../../../img/ui/cross.svg");
+    content: url("../img/ui/cross.svg");
     vertical-align: bottom;
     margin-left: 10px;
 }
 
 #kiSystemAlertBox .kbAlertScroll > span.answer-right::before {
-    content: url("../../../img/ui/tick.svg");
+    content: url("../img/ui/tick.svg");
     vertical-align: bottom;
     margin-left: 10px;
 }
