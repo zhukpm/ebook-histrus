@@ -33093,7 +33093,7 @@ app.directive("iframeOnload", [function () {
         y.setAttribute("type", "text/css"), i.pages && null != i.vIndex ? i.content = i.pages[i.vIndex].content : !i.content && i.raw && (i.content = i.raw), i.content = b(i.content), r && (r.pages && null != r.vIndex ? r.content = r.pages[r.vIndex].content : !r.content && r.raw && (r.content = r.raw), r.content = b(r.content)), t.cached = !1, v = O.populateSpreads(v, t), t.cached || (i.styles = i.styles.replace(/#spreadR/g, "#spreadL"), t.simulate || (i.styles = i.styles.replace(/(url\()(.*?)(\))/g, p)), r && (r.styles = r.styles.replace(/#spreadL/g, "#spreadR"), t.simulate || (r.styles = r.styles.replace(/(url\()(.*?)(\))/g, p))));
         i.styles;
         var w = f(i.styles);
-        !t.cached && r && (w += " " + f(r.styles), r.styles), y.innerHTML = w + "@media (min-width: 992px){.iframed .basic-facts{padding-block-start:clamp(10px,calc((100vh - 420px)/2),100px)!important}.basic-facts .decor-element-bw{max-height: calc(50vh + 189px - calc(11px + 1.2*1.111111em))!important}};@media (min-width: 1300px){html{padding-left:330px}};", l.appendChild(y);
+        !t.cached && r && (w += " " + f(r.styles), r.styles), y.innerHTML = w + "@media (min-width: 992px){.iframed .basic-facts{padding-block-start:clamp(10px,calc((100vh - 420px)/2),100px)!important}.basic-facts .decor-element-bw{max-height: calc(50vh + 189px - calc(11px + 1.2*1.111111em))!important}}@media (min-width: 1300px){html{padding-left:330px}}", l.appendChild(y);
         var k = v.getElementsByTagName("audio");
         for (u = k.length; u--;) {
             try {

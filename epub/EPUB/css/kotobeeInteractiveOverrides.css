@@ -238,8 +238,8 @@ Hiding splash screen title
 возникает глитч
  */
 @media (min-width: 1300px) {
-    .navBookBlock #prevPage,
-    .navBookBlock #nextPage {
+    #renderer #prevPage,
+    #renderer #nextPage {
         width: calc(100% + 330px); /* Ширина родителя + сайдбар */
         margin-left: -330px;
     }
